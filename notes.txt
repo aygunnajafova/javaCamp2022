@@ -1,0 +1,34 @@
+type identifier = new type();
+
+import java.util.Scanner; -> ctrl + Shift + O
+...
+Scanner scanner = new Scanner(System.in);
+string name = scanner.nextLine();
+
+scanner.nextInt() - integer input alır
+scanner.nextDouble()
+int note = Integer.parseInt(str1);
+
+System.out.print("..."); - növbəti sətirə keçmir
+
+String.valueOf() - int/char to string
+Character.toString(ch) - char to string
+Character.getNumericValue(c) - char to int
+Integer.parseInt(str) - string to Integer
+
+String formatted = String.format("%.2f", myDouble); - 2 işarə dəqiqliyi ilə verilir
+System.out.printf("%.2f", number); - 2 işarə dəqiqliyi ilə verir
+
+Math.pow(a, b) - qüvvət
+Math.sqrt(a) - kök
+Math.round(a) - yuvarlaqlaşdırma/double to int
+
+Character.toLowerCase() - 
+
+
+902(E)+ 903(E)+ 904(E)+ 905(E)+ 906(E)+ 907(E)+ 908(E)+ 909(E)+ 910(E)+
+1+ 923+ 939+ 945+ 953+
+
+519+ 108+ 911 915+ 917+ 918+ 929+ 933+ 935+ 941+ 943+ 945+ 949+ 955+ 959+ 990+ 1024+ 1623+ 2042 2044 2132
+916
+

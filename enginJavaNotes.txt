@@ -1,0 +1,200 @@
+psvm + enter - > public static void main
+// - cmnt line
+/* ... */ - 
+System.out.println() - tək sətiri ekranda çıxarır
+; - sətirin bitdiyini bildirir
+new folder = new directory
+Java case sensitive dildir
+dəyişən adları camalCase (camel casing) ilə adlanır
+reusability - təkrar istifadə edilə bilirlik
+dəyişkənləri təkrar-təkrar istifadə edə bilmək və yaddaşdan qənaət etmək üçün yaradırıq
+Java tip güvenli bir dildir, dəyişənin tipi yaradılarkən bildirilməlidir
+primitive types: boolean(true or false)/1byte,
+                 char(single character/Unicode)/2bytes, byte(integer)/1 byte, short(integer)/2 bytes, int(integer)/4 bytes/default, long(integer)/8 bytes,
+		     float(floating-point number)/4 bytes, double(floating-point number)/8bytes/default
+şərt blokları: if(), switch() -> ekrana yekun bir nəticə çıxarır
+defency programming - müdafiəçi programlaşdırma
+intellij IDEA code formatting: ctrl + shift + alt + l
+loop - eyni təkrarlanan işləri görmək üçün istifadə edirik
+do{}while(); - while(){} dan fərqi: şərt ödənməsə belə bir dəfə çalışır
+array'lər eyni tipdə çoxlu dəyişən təyin etmək üçün istifadə edilir
+array.length - array'in uzunluğunu verir
+reverse engineering - tərsinə proqramçılıq(bir codun vs. başqa proqramçı tərəfindən oxunması)
+best practises - doğru edilmə yöntəmləri
+multidimensional arrays - çoxölçülü array'lər
+String[][] cities = new String[x][y] - x(sətir), y(sütun)
+nested loops - iç-içə dövrlər
+
+String char arrayi'dir
+str.length() - uzunluğunu verir
+str.charAt(4) - 4. indexdəki elementi verir
+str1.concat(str2) - iki stringi birləşdirir, yeni string yaradır
+str.startsWith("") / str.endsWith("") - true/false döndürür
+str1.getChars(x, y, str2, 0) - voiddir, str1'dən [x, y) - aralığında elementləri str2'də 0. indexdən əlavə edir
+str.indexOf('a') - ilk tapdığı a indexini verir
+str.lastIndexOf() - axtarmağa sondan başlayır
+str.replace('x', 'y') - x'ləri y ilə əvəz edir, yeni string yaradır
+str.substring(x) - x. indexdən etibarən götürür
+str.substring(x, y) - [x,y) aralığında götürür
+str.split(" ") - boşluğa görə bölür
+str.toLowerCase() - bütün hərfləri kiçildir
+str.toUpperCase() - bütün hərfləri böyüdür
+str.trim() - baş və sondakı boşluqları atır
+str.toCharArray()
+
+bug - proqramdaki məntiqsəl və ya sistemsal səhvlər
+return - içərisində olduğu bütün bloku bağlayır
+
+int[] arr = new int[] {1, 2, 3};
+
+DRY - Don't Repeat Yourself
+Methodlar DRY prinsipi üçün istifadə edilir
+
+main də bir metoddur
+methodName(); - method calling
+
+void methodlar return deyil, bir nəticə vermir
+void methodları bir dəyişkənə mənimsədə bilmərik
+variable arguments(methoda birdən çox parametr göndərmək üçün)
+public static int method(int... numbers) {} - sonra 3 nöqtə qoyulmalıdır, numbers'i bir array'a çevirir arxa hissədə
+method adları camelCase ilə adlandırılır
+
+Sürdürüle bilir yazılım
+
+class'ların əsas özəlliyi qruplama etməkdir
+class'lar reference type'dır
+
+yaddaşda iki sahə var: 1.Stack 2.Heap
+CustomerManager customerManager; - stack'də bu dəyişəni yaradır
+CustomerManager customerManager = new CustomerManager(); - heap'də onun qarşılığını yaradır 
+
+hər hansı bir reference'ı tutan bir dəyişən olmazsa, garbage collector onu bir müddət sonra yaddaşdan silir
+
+integer, double, float, byte - value types/dəyər tiplər
+class və array'lər reference type'dır
+
+class'lar method, field(attribute) tutur
+class'ın attribut'ları default olaraq publicdir(C# da private'dır)
+
+public class Product {} - Product'ın xüsusiyyətlərini tutur
+public class ProductManager {} - Productları JDBC kodları ilə database'ə yazır
+JDBC - Java Database Connectivity (programı DB ilə bağlayan kodlar)
+Bir class içərisində başqa bir class'ı istifadə edə bilərik
+
+SOLİD
+S - Single Responsibility(bir class bir iş görər)
+O - open-closed principle(açıq-qapalı prinsipi) bir sistemə yeni bir özəllik gətirildiyində mövcuddaki heç bir kodu dəyişdirə bilməzsən
+
+private - sadəcə təyin olunduğu blokda keçərlidir
+
+read only - sadəcə oxuna bilinən(yazılmır) kod (get)
+write only - sadəcə mənimsədilə bilir, oxunmur (set)
+get(get bloku -> getter) - oxumaq
+set(set bloku -> setter) - dəyər mənimsətmək
+this - içərisində olduğumuz class
+get və set bloklarını yaratmaq üçün: fieldName üzərində sağ düymə -> Refactor -> Encapsulate Fields
+
+class'ların constructorları ola bilir, class adı ilə eyni olur
+her class'ın default constructoru olur
+constructor - class new'lənərkən işə düşən ilk blockdur
+overloading(çox yüklənmə) - eyni adla, fərqli parametrlərlə method, constructor yaradılması
+
+Inheritance(Miras)
+public class Customer extends Person {}
+bir class sadəcə başqa bir ədəd class'ı extend/inherit ala bilər, daha çox yox
+
+UI - user interface
+
+Polymorphisim(çox biçimlilik) - üst class/interface referansının bütün alt classların referanc'ını tutabilməsi
+
+overriding(üzərinə yazmaq) - inherit alınmış class'dakı methodu yenidən fərqli şəkildə yazmaq
+overridable - üzərinə yazıla bilər
+final - üzərinə yazıla bilməz, yəni method dəyişdirilə bilməz
+public final double calculate() {};
+
+pack and play(tax və çalışdır)
+
+bir class içərisində başqa class'ın new'lənməsindən qaçınmalıyıq
+
+abstract class da bir class'dır, hər bir class/abstract class yalnızca başqa bir ədəd class/abstract class inherit ala bilər
+abstract olan methodlar bu class'ı inherit alan bütün classlarda override edilməlidir, default'u yoxdur
+abstract methodlar base class'da tamamlanmır
+abstract bir class'da mütləq bir abstract obyekt olmalıdır deyə bir məcburiyyət yoxdur
+abstract class'da tamamlanmış methodlar da ola bilər
+abstract classlar heç vaxt new'lənə bilməzlər, reference tuta bilir
+/fərqli bir durum(dəyişkən metod) varsa abstract classlardan istifadə edə bilərik
+
+@Override - annotation
+
+class'lar yalnızca tamamlanmış methodlar tuta bilir
+abstract classlar həm tamamlanmış, həm tamamlanmamış methodlar tutur
+interface'lər tamamlanmamış methodlar tutur
+
+interface onu implemente edən class'ın reference'nı tuta bilir
+interface'lər implementə olunur(inherit yox)
+interface'lər new'lənmir
+implements və extends fərqi: bir class birdən çox interface implement edə bilər
+interface'lər adlandırılarkən I(IInterface) ilə baslamalıdır
+Dal, Manager, UI layerlerin keçişlərini interfacelərlə edirik, bağımlılıq olmaması üçün
+interface obyektləri default olaraq public'dir
+/interface'lərdə default (default void Method() {}; ) yazılan metodlar da ola bilər, bunlar avtomatik implemente olunur, içi doldurulmalıdır
+
+/polymorphism reference tutmaq
+
+Manager - iş kodları yazılır
+Dal (Data Access Layer) - database ilə bağlı kodlar yazılır
+
+static - daha çox utility yazılarkən istifadə edilir
+product.name.isEmpty() - dəyər verilməyibsə
+bir metodu static etdiyimiz zaman class adı ilə(class new'lənmədən) çağırılır (ProductManager.valid()) çağırıldığı anda yaddaşda yaradılır
+static metodları çağıran zaman class'ın constructoru çalışmır ancag static constructorlar da yaza bilərik (sadəcə static {} yazmaq kifayətdir)
+birdən çox static yarada bilərik
+ana class static ola bilmir
+inner class(class içərisindəki class) static ola bilər
+inner class istifadəsi məsləhət deyil (Single Responsibility)
+
+CRUD - Creat Read Update Delate
+
+packages = modul = kitabxana
+src -> new -> packets - öz kitabxanamızı yaratmaq üçün
+paketləri qruplama üçün istifadə edirik
+paket adları kiçik hərflə başlayır
+built-in java'da hazır paketlər
+başqa paketi istifadə etmək üçün import etməliyik (import packageName.name)
+import packageName.* paketin içərisindəki hər şeyi import edir
+import java.util.Scanner - istifadəçidən data almaq üçün istifadə edilir
+String name = scanner.nextLine() - bir sətiri oxumaq üçün
+
+
+öncədən yaratdığımız array'i yenidən new'ləyən zaman dəyərlər 0'lanır (arr = new int[4])
+ArrayList list = new ArrayList();
+import java.util.ArrayList; - listləri istifadə edə bilmək üçün yükləməliyik
+list.size() - element sayı
+list.add(y) - element/obyekt əlavə etmək
+list.get(x) - x indexli element gətirir
+list.set(x, y) - x indexli elemnti y'ilə dəyişir (təyin olunmamış elementi dəyişə bilmərik)
+list.remove(x) - x indexli elementi silir(siləcəyimiz elementin özünü yaza bilərik, ilk tapdığını silir)
+list.clear() - bütün elementləri silir
+
+arraylist elementlərin for içərisində Object ilə gəzirik
+Type-Safe Array Listlərlə çalışmaq daha məsləhətdir
+ArrayList<Type> list = new ArrayList<Type>();
+
+Collections.sort(list) - sıralayır
+import java.util.Collection; əlavə edilməlidir
+ArrayList<Customer> customers = new ArrayList<Customer>(); - arraylist of Customers kimi oxunur
+
+HashMap - dictionary
+import java.util.HashMap;
+HashMap<Type, Type> dictionary = new HashMap<Type, Type>();
+dictionary.put("key", "value") - element əlavə edir
+dictionary.get("key") - dəyəri silir
+dictionary.remove("key")
+dictionary.clear() - tamamilə təmizləyir
+dictionary.size() - element sayını verir
+dictionary.keySet() - key elementləri siyahı olaraq verir
+set ifadəsi heç vaxt yazıldığı sıra ilə gətirmir elementləri
+dictionary.values() - dəyərləri gətirir
+
+
+
